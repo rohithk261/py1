@@ -13,8 +13,8 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 	</repository>
 	<repository>
 			<id>internal</id>
-			<name>Internal Repository</name>
-			<url>http://localhost:8081/nexus</url>
+			<name>Internal Repository-releases</name>
+			<url>dav:http://localhost:8081/nexus/#view-repositories;releases~browsestorage/</url>
 			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>
@@ -66,12 +66,5 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
             </configuration>
         </plugin>
   </plugins>
-    <repository>
-      <id>internal</id>
-      <name>Internal Repository-releases</name>
-      <url>
-      dav:http://localhost:8081/nexus/#view-repositories;releases~browsestorage/
-	  </url>
-    </repository>
  </build> 
 </project>
