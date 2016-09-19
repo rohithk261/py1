@@ -4,7 +4,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
    <modelVersion>4.0.0</modelVersion>
    <groupId>org.codehaus.mojo</groupId>
    <artifactId>pythoncode</artifactId>
-   <version>09.11</version>
+   <version>6.09.11</version>
    <packaging>jar</packaging>
 <repositories>
 	<repository>
@@ -13,8 +13,8 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 	</repository>
 	<repository>
 			<id>internal</id>
-			<name>Internal Repository-releases</name>
-			<url>dav:http://localhost:8081/nexus/#view-repositories;releases~browsestorage/</url>
+			<name>Internal Repository</name>
+			<url>http://localhost:8081/</url>
 			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>
@@ -66,5 +66,20 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
             </configuration>
         </plugin>
   </plugins>
- </build> 
+</build>
+<distributionManagement>
+    <repository>
+      <id>internal</id>
+      <name>Internal Repository-releases</name>
+      <url>
+      http://localhost:8081/repository/TestPy/
+	  </url>
+    </repository>
+    <snapshotRepository>
+      <id>internal</id>
+      <name>Internal Repository-snapshots</name>
+     <url>http://localhost:8081/repository/PythonSnaps/</url>
+    </snapshotRepository>
+  </distributionManagement>
+  
 </project>
